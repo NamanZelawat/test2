@@ -3,6 +3,7 @@ import { Resizable } from "re-resizable";
 import ResizeCard from "./components/ResizeCard";
 import './App.css';
 
+let baseurl = "https://test2apiz.herokuapp.com";
 
 class App extends Component 
 {
@@ -31,7 +32,7 @@ class App extends Component
 
   fetchContent1()
   {
-    fetch("http://localhost:5050/api/content1", {
+    fetch(baseurl+"/api/content1", {
       method: "get",
       headers: { "Content-Type": "application/json" },
     })
@@ -52,7 +53,7 @@ class App extends Component
 
   fetchContent2()
   {
-    fetch("http://localhost:5050/api/content2", {
+    fetch(baseurl + "/api/content2", {
       method: "get",
       headers: { "Content-Type": "application/json" },
     })
@@ -73,7 +74,7 @@ class App extends Component
 
   fetchContent3()
   {
-    fetch("http://localhost:5050/api/content3", {
+    fetch(baseurl + "/api/content3", {
       method: "get",
       headers: { "Content-Type": "application/json" },
     })
@@ -94,7 +95,7 @@ class App extends Component
 
   updateContent1(text)
   {
-    fetch("http://localhost:5050/api/content1", {
+    fetch(baseurl + "/api/content1", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(
@@ -119,7 +120,7 @@ class App extends Component
 
   updateContent2(text)
   {
-    fetch("http://localhost:5050/api/content2", {
+    fetch(baseurl + "/api/content2", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -143,7 +144,7 @@ class App extends Component
 
   updateContent3(text)
   {
-    fetch("http://localhost:5050/api/content3", {
+    fetch(baseurl + "/api/content3", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
